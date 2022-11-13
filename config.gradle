@@ -1,0 +1,30 @@
+//版本依赖
+ext {
+    /*App SDK 版本*/
+    appConfig = [
+            compileSdk : 32,
+            minSdk     : 21,
+            targetSdk  : 32,
+            versionCode: 1,
+            versionName: "1.0"
+    ]
+
+    /*防止资源冲突*/
+    appResourcePrefix = [
+            module_main: "module_main_",
+            module_base: "module_base_"
+    ]
+
+    /*官方引用库版本*/
+    appDependencies = [
+            appcompat       : "1.3.1",
+            material        : "1.4.0",
+            constraintlayout: "2.0.4",
+            multidex        : "2.0.1"
+    ]
+
+    /*第三方引用库版本*/
+    appExternal = [
+            appcompattt: "1.3.1"
+    ]
+}

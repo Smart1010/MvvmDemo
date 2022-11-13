@@ -8,3 +8,6 @@ plugins {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+//引用版本控制文件
+apply from: "config.gradle"
