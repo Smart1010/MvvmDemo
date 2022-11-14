@@ -2,33 +2,20 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".activity.MainActivity"
+    tools:context=".activity.ARoutActivity"
     tools:ignore="ResourceName">
-
-    <data>
-
-        <variable
-            name="viewModel"
-            type="com.smart1010.mvvmdemo.activity.MainViewModle" />
-
-        <variable
-            name="presenter"
-            type="com.smart1010.mvvmdemo.activity.MainActivity.Presenter" />
-
-    </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
         <TextView
+            android:id="@+id/test_tv"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:background="@android:color/darker_gray"
             android:gravity="center"
-            android:onClick="@{(view)->presenter.onRoutClick(view)}"
-            android:text="点击路由跳转"
+            android:text="点击EventBus数据发送"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -37,11 +24,13 @@
             android:id="@+id/name_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{viewModel.name}"
+            android:text="路由界面"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>
