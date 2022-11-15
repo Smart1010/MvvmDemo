@@ -63,4 +63,5 @@ dependencies {
 //    kapt "com.alibaba:arouter-compiler:${appExternal.arouter_compiler}"
 
     api "org.greenrobot:eventbus:${appExternal.eventbus}"
+    api "com.tencent:mmkv:${appExternal.mmkv}"
 }
