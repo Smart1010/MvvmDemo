@@ -59,9 +59,13 @@ dependencies {
     api "com.google.android.material:material:${appDependencies.material}"
     api "androidx.constraintlayout:constraintlayout:${appDependencies.constraintlayout}"
 
+//    api "org.jetbrains.kotlinx:kotlinx-coroutines-android:${appExternal.kotlinx_coroutines_android}"
+    api "androidx.lifecycle:lifecycle-viewmodel-ktx:${appExternal.viewmodel_ktx}"
+
     api "com.alibaba:arouter-api:${appExternal.arouter_api}"
 //    kapt "com.alibaba:arouter-compiler:${appExternal.arouter_compiler}"
 
     api "org.greenrobot:eventbus:${appExternal.eventbus}"
     api "com.tencent:mmkv:${appExternal.mmkv}"
+
 }

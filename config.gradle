@@ -25,9 +25,11 @@ ext {
 
     /*第三方引用库版本*/
     appExternal = [
-            arouter_api     : "1.5.2",//阿里路由
-            arouter_compiler: "1.5.2",
-            eventbus        : "3.3.1", //事件总线
-            mmkv            : "1.2.14" //sp存储
+            arouter_api               : "1.5.2",//阿里路由
+            arouter_compiler          : "1.5.2",
+            eventbus                  : "3.3.1", //事件总线
+            mmkv                      : "1.2.14", //sp存储
+            kotlinx_coroutines_android: "1.5.2", //协程支持
+            viewmodel_ktx             : "2.3.1" //协程支持viewmodel
     ]
 }

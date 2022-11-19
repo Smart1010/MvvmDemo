@@ -29,6 +29,9 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModle>() {
         EventBus.getDefault().register(this)
         mBinding.viewModel = mViewModel
         mBinding.presenter = mPresenter
+//        CoroutineScope(Dispatchers.Main).launch {
+//            withContext(Dispatchers.IO)
+//        }
     }
 
     override fun onDestroy() {
