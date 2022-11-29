@@ -12,7 +12,7 @@ import kotlinx.coroutines.launch
  *  date : 2022/11/13 17:26
  *  description : ViewModel基类
  */
-open class BaseViewModel : ViewModel() {
+abstract class BaseViewModel : ViewModel() {
 
     val loadState = MutableLiveData<String>()
 

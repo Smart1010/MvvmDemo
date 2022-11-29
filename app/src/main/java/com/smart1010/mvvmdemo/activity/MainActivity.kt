@@ -1,9 +1,12 @@
 package com.smart1010.mvvmdemo.activity
 
 import android.view.View
+import android.widget.Toast
 import com.alibaba.android.arouter.launcher.ARouter
+import com.hjq.permissions.Permission
+import com.smart1010.module_base.Constant
 import com.smart1010.module_base.base.BaseActivity
-import com.smart1010.mvvmdemo.Constant
+import com.smart1010.module_base.utils.PermissionsUtils
 import com.smart1010.mvvmdemo.MessageEvent
 import com.smart1010.mvvmdemo.R
 import com.smart1010.mvvmdemo.databinding.ActivityMainBinding
@@ -29,9 +32,33 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModle>() {
         EventBus.getDefault().register(this)
         mBinding.viewModel = mViewModel
         mBinding.presenter = mPresenter
-//        CoroutineScope(Dispatchers.Main).launch {
-//            withContext(Dispatchers.IO)
-//        }
+
+        PermissionsUtils.requestPermissions(
+            this,
+            object : PermissionsUtils.OnPermissionBack {
+                override fun onGranted() {
+                    Toast.makeText(this@MainActivity, "授权成功", Toast.LENGTH_LONG).show()
+                }
+            },
+            Permission.ACCESS_FINE_LOCATION,
+            Permission.ACCESS_COARSE_LOCATION,
+            Permission.WRITE_EXTERNAL_STORAGE,
+            Permission.READ_PHONE_STATE,
+            Permission.WRITE_SETTINGS,
+            Permission.READ_EXTERNAL_STORAGE,
+            Permission.RECORD_AUDIO,
+            Permission.CAMERA
+        )
+
+        /*CoroutineScope(Dispatchers.Main).launch {
+           val list=withContext(Dispatchers.IO) {
+                 RoomUtils(this@MainActivity.application).db.userDao().getAllUser()
+            }
+            if (list.isEmpty()){
+                Toast.makeText(this@MainActivity.application,"",Toast.LENGTH_LONG).show()
+            }
+        }*/
+
     }
 
     override fun onDestroy() {
@@ -48,6 +75,10 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModle>() {
 
         fun onRoutClick(v: View) {
             ARouter.getInstance().build(Constant.arout_activity).navigation()
+        }
+
+        fun onDataClick() {
+            ARouter.getInstance().build(Constant.data_activity).navigation()
         }
     }
 }

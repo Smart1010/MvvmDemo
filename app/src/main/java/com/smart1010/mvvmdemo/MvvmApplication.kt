@@ -4,6 +4,7 @@ import android.app.Application
 import android.content.Context
 import androidx.multidex.MultiDex
 import com.alibaba.android.arouter.launcher.ARouter
+import com.smart1010.module_base.utils.RoomUtils
 import com.tencent.mmkv.MMKV
 
 class MvvmApplication : Application() {

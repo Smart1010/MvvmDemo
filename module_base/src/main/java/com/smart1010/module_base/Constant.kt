@@ -1,4 +1,4 @@
-package com.smart1010.mvvmdemo
+package com.smart1010.module_base
 
 /**
  *  author : Snail
@@ -8,5 +8,7 @@ package com.smart1010.mvvmdemo
 object Constant {
 
     const val arout_activity: String = "/test/activity"
+
+    const val data_activity: String = "/data/activity"
 
 }

@@ -1,7 +1,7 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
-//    id 'kotlin-kapt'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -15,7 +15,7 @@ android {
         consumerProguardFiles "consumer-rules.pro"
 
         resourcePrefix appResourcePrefix.module_base
-
+        multiDexEnabled true
 //        javaCompileOptions {
 //            annotationProcessorOptions {
 //                arguments = [AROUTER_MODULE_NAME: project.getName()]
@@ -48,24 +48,34 @@ android {
 
 dependencies {
 
-    implementation 'androidx.core:core-ktx:1.7.0'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
-    api "androidx.multidex:multidex:${appDependencies.multidex}"
-
+    api "androidx.core:core-ktx:${appDependencies.core_ktx}"
     api "androidx.appcompat:appcompat:${appDependencies.appcompat}"
     api "com.google.android.material:material:${appDependencies.material}"
     api "androidx.constraintlayout:constraintlayout:${appDependencies.constraintlayout}"
 
-//    api "org.jetbrains.kotlinx:kotlinx-coroutines-android:${appExternal.kotlinx_coroutines_android}"
+    api "androidx.multidex:multidex:${appDependencies.multidex}"
+
+    api "com.squareup.leakcanary:leakcanary-android:${appExternal.leakcanary}"
+
+//    api "org.jetbrains.kotlinx:kotlinx-coroutines-android:${appExternal.kotlinx_coroutines}"
     api "androidx.lifecycle:lifecycle-viewmodel-ktx:${appExternal.viewmodel_ktx}"
+    api "androidx.fragment:fragment-ktx:${appExternal.fragment_ktx}"
 
     api "com.alibaba:arouter-api:${appExternal.arouter_api}"
 //    kapt "com.alibaba:arouter-compiler:${appExternal.arouter_compiler}"
 
     api "org.greenrobot:eventbus:${appExternal.eventbus}"
     api "com.tencent:mmkv:${appExternal.mmkv}"
+
+    api "androidx.room:room-runtime:${appExternal.roomVersion}"
+    api "androidx.room:room-ktx:${appExternal.roomVersion}"
+    kapt "androidx.room:room-compiler:${appExternal.roomVersion}"
+
+    api "com.github.getActivity:XXPermissions:${appExternal.XXPermissions}"
+
 
 }
