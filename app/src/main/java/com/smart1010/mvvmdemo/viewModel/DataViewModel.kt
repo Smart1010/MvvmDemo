@@ -1,4 +1,4 @@
-package com.smart1010.mvvmdemo.activity
+package com.smart1010.mvvmdemo.viewModel
 
 import android.app.Application
 import androidx.lifecycle.MutableLiveData

@@ -9,6 +9,7 @@ import com.smart1010.module_base.Constant
 import com.smart1010.mvvmdemo.MessageEvent
 import com.smart1010.mvvmdemo.R
 import com.smart1010.mvvmdemo.databinding.ActivityAroutBinding
+import com.smart1010.mvvmdemo.viewModel.ARoutViewModle
 import org.greenrobot.eventbus.EventBus
 
 @Route(path = Constant.arout_activity)

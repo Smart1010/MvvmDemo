@@ -1,4 +1,4 @@
-package com.smart1010.mvvmdemo.activity
+package com.smart1010.mvvmdemo.viewModel
 
 import com.smart1010.module_base.base.BaseViewModel
 

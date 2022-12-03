@@ -59,5 +59,7 @@ dependencies {
 //    implementation "com.alibaba:arouter-api:1.5.2"
     kapt "androidx.room:room-compiler:${appExternal.roomVersion}"
 
+    kapt 'com.github.bumptech.glide:compiler:4.14.2'
+
     implementation project(path: ':module_base')
 }

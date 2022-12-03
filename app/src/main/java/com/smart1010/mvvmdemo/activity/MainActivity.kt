@@ -3,6 +3,7 @@ package com.smart1010.mvvmdemo.activity
 import android.view.View
 import android.widget.Toast
 import com.alibaba.android.arouter.launcher.ARouter
+import com.bumptech.glide.Glide
 import com.hjq.permissions.Permission
 import com.smart1010.module_base.Constant
 import com.smart1010.module_base.base.BaseActivity
@@ -10,6 +11,7 @@ import com.smart1010.module_base.utils.PermissionsUtils
 import com.smart1010.mvvmdemo.MessageEvent
 import com.smart1010.mvvmdemo.R
 import com.smart1010.mvvmdemo.databinding.ActivityMainBinding
+import com.smart1010.mvvmdemo.viewModel.MainViewModle
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
@@ -49,6 +51,20 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModle>() {
             Permission.RECORD_AUDIO,
             Permission.CAMERA
         )
+
+        Glide
+            .with(this)
+            .load("https://cn.bing.com/sa/simg/hpb/LaDigue_EN-CA1115245085_1920x1080.jpg")
+            .placeholder(R.mipmap.ic_launcher)
+            .override(300, 300)
+            .into(mBinding.image1);
+
+
+        Glide
+            .with(this)
+            .load("http://guolin.tech/book.png")
+            .placeholder(R.mipmap.ic_launcher)
+            .into(mBinding.image2);
 
         /*CoroutineScope(Dispatchers.Main).launch {
            val list=withContext(Dispatchers.IO) {
