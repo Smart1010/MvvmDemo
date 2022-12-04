@@ -45,8 +45,4 @@ abstract class BaseFragment<T : ViewDataBinding, F : BaseViewModel> : Fragment()
     abstract fun initModelClass(): Class<F>
 
     abstract fun initView()
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-    }
 }

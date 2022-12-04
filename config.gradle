@@ -36,6 +36,7 @@ ext {
             roomVersion       : "2.4.2",//room
             XXPermissions     : "16.2", //权限
             leakcanary        : "2.5", //内存泄漏检测
-            glide             : "4.14.2" //内存泄漏检测
+            glide             : "4.14.2", //内存泄漏检测
+            retrofit          : "2.9.0" //网络请求
     ]
 }

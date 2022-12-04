@@ -96,5 +96,9 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModle>() {
         fun onDataClick() {
             ARouter.getInstance().build(Constant.data_activity).navigation()
         }
+
+        fun onLoginClick() {
+            mViewModel.login("")
+        }
     }
 }

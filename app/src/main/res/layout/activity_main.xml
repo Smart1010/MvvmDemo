@@ -48,6 +48,19 @@
             app:layout_constraintTop_toBottomOf="@+id/arout_tx" />
 
         <TextView
+            android:id="@+id/login_tx"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@android:color/darker_gray"
+            android:gravity="center"
+            android:onClick="@{()->presenter.onLoginClick()}"
+            android:text="登录"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/data_tx" />
+
+        <TextView
             android:id="@+id/name_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
